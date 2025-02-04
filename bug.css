@@ -1,0 +1,9 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, there are certain edge cases and unexpected behaviors that can lead to errors. One such case is when dealing with spaces within the calculation. For instance, the following CSS rule will not work correctly:
+
+```css
+.element { 
+  width: calc(100% - 20px );
+}
+```
+
+The presence of an extra space after `100%` and before `-20px` can cause issues in some browsers.  Another uncommon error is related to unit mixing. The units within the calculation must be consistent. For example, `calc(100px + 20%)` is problematic because it mixes pixel units and percentages, which might not be correctly resolved by all browsers.
